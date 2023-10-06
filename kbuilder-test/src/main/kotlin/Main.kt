@@ -17,6 +17,5 @@ fun main() {
         .username { "llonvne" }
         .age { 11 }
         .phone { "1508866666" }
-        .address {  }
         .build { }
 }
