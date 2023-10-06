@@ -62,6 +62,9 @@ fun interface UserAgeBuilder {
 ```
 These interfaces only provide functions to initialize the current property and then point to the next interface that needs to be initialized. Only when there are no non-nullable properties without default values will it point to the general Builder.With this approach, we can fully ensure that all non-nullable properties without initial values are correctly initialized.
 The implementation is relatively straightforward. All interfaces are implemented in the general builder, and the preceding interfaces only point to a single object, just temporarily hiding some methods.That is to say, if you want to initialize in another way, or perform some actions that are not provided, you can also forcibly cast it to the general builder, but of course, this will lose the guarantee of null safety.
+
+Notice:Some details are simplified here, see specific [Issue#2](https://github.com/Llonvne/KBuilderDsl/issues/2) for more information
+
 ```kotlin
 class UserBuilder(
     private var username: String? = null,
