@@ -1,3 +1,5 @@
+# 暂时停止开发
+---
 # KBuilderDsl
 
 #### A null-safe Kotlin builder pattern code compiler generator
